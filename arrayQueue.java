@@ -64,7 +64,7 @@ public class ArrayQueue1<E> implements QueueADT1<E>
 	    switch (input)
 	    {
 		case 1:
-		    queue.enqueue("string");
+		    queue.enqueue(rand.nextInt(50));
 		    break;
 		case 2:
 		    queue.dequeue();
