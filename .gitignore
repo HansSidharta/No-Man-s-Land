@@ -11,3 +11,9 @@ No Man's Land/Library
 No Man's Land/Assembly-CSharp-Editor-firstpass.csproj
 No Man's Land/Assembly-CSharp-firstpass.csproj
 No Man's Land/Assembly-CSharp.csproj
+No Man's Land/Library/metadata/
+No Man's Land/Built/
+No Man's Land/Temp/
+No Man's Land/Library/
+**/ShaderCache/
+**/PlayerDataCache/
