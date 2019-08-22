@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.49641287, b: 0.5748173, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -990,83 +990,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1242217963}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &834896563 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400026, guid: 7e1741de780e13f42a448fdb5b60c1e1,
-    type: 3}
-  m_PrefabInstance: {fileID: 939920369}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &856730182 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4909627193785698, guid: 8f281d16e094c6a4896e37696e49dea9,
     type: 3}
   m_PrefabInstance: {fileID: 282926102}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &939920369
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1917187010}
-    m_Modifications:
-    - target: {fileID: 100026, guid: 7e1741de780e13f42a448fdb5b60c1e1, type: 3}
-      propertyPath: m_Name
-      value: AircraftPropeller
-      objectReference: {fileID: 0}
-    - target: {fileID: 400026, guid: 7e1741de780e13f42a448fdb5b60c1e1, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 17.029734
-      objectReference: {fileID: 0}
-    - target: {fileID: 400026, guid: 7e1741de780e13f42a448fdb5b60c1e1, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.81
-      objectReference: {fileID: 0}
-    - target: {fileID: 400026, guid: 7e1741de780e13f42a448fdb5b60c1e1, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.2986186
-      objectReference: {fileID: 0}
-    - target: {fileID: 400026, guid: 7e1741de780e13f42a448fdb5b60c1e1, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400026, guid: 7e1741de780e13f42a448fdb5b60c1e1, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.8788363
-      objectReference: {fileID: 0}
-    - target: {fileID: 400026, guid: 7e1741de780e13f42a448fdb5b60c1e1, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400026, guid: 7e1741de780e13f42a448fdb5b60c1e1, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.47712356
-      objectReference: {fileID: 0}
-    - target: {fileID: 400026, guid: 7e1741de780e13f42a448fdb5b60c1e1, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400026, guid: 7e1741de780e13f42a448fdb5b60c1e1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400026, guid: 7e1741de780e13f42a448fdb5b60c1e1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -123.005005
-      objectReference: {fileID: 0}
-    - target: {fileID: 400026, guid: 7e1741de780e13f42a448fdb5b60c1e1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5400000, guid: 7e1741de780e13f42a448fdb5b60c1e1, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400000, guid: 7e1741de780e13f42a448fdb5b60c1e1, type: 3}
-      propertyPath: m_MaxEnginePower
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7e1741de780e13f42a448fdb5b60c1e1, type: 3}
 --- !u!4 &948168244 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4925135389410846, guid: b4b140ef271131646b1b285ea1904282,
@@ -1454,7 +1383,7 @@ Transform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1917187010}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1547387575
 PrefabInstance:
@@ -1876,7 +1805,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1617999381}
-  - {fileID: 834896563}
   - {fileID: 1526517720}
   m_Father: {fileID: 0}
   m_RootOrder: 4
