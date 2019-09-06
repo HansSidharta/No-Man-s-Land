@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class Throw : MonoBehaviour
+public class ThrowGrenade : MonoBehaviour
 {
     private Vector2 initialFingerPosition;
     private Vector2 finalFingerPosition;

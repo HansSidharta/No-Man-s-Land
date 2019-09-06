@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Grenade : MonoBehaviour
+public class GrenadeJob : MonoBehaviour
 {
     public float delay = 3f;
     public float blasteradius = 1f;
