@@ -1,7 +1,6 @@
 ﻿
 public class GenerateDensity
 {
-
      public GenerateDensity()
     {
         //Empty Constructor
