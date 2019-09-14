@@ -55,7 +55,8 @@ public class World : MonoBehaviour
     private void Start()
     {
         worldBounds = new Bounds();
-        UpdateBounds();
+        UpdateBounds();   
+        //Debug.Log(worldBounds.ToString());     
 
         chunks = new Dictionary<Vector3Int, Chunk>(worldWidth*worldHeight*worldDepth);;
         CreateChunks();
@@ -163,7 +164,13 @@ public class World : MonoBehaviour
 
     public bool IsPointInsideWorld(int x, int y, int z)
     {
+        //Debug.Log(worldBounds.ToString());
         return IsPointInsideWorld(new Vector3Int(x, y, z));
+    }
+
+    public string getworldBounds()
+    {
+        return worldBounds.ToString();
     }
 
     public bool IsPointInsideWorld(Vector3Int point)

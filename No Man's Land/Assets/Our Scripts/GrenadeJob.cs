@@ -8,6 +8,8 @@ public class GrenadeJob : MonoBehaviour
     public float force = 700f;
     bool hasExploded = false;
     public GameObject explosionEffect;
+
+    public GameObject GrenadeTerrainDeform;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +38,8 @@ public class GrenadeJob : MonoBehaviour
             if(rb != null)
             {
                 rb.AddExplosionForce(force, transform.position,blasteradius);
+                //Code here               
+                Instantiate(GrenadeTerrainDeform, transform.position, transform.rotation);
             }
         }
         Destroy(gameObject);

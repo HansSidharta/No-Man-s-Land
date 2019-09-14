@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Trenches : MonoBehaviour
+public class BrushDeform_TerrainEdit : MonoBehaviour
 {
     [SerializeField] private bool addTerrain = false;
     [SerializeField] private float force = 2f;
@@ -22,8 +22,8 @@ public class Trenches : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mesh = attachedMeshObject.GetComponent<MeshFilter>().mesh;
         _initChunks = new Chunk[8];
+        mesh = attachedMeshObject.GetComponent<MeshFilter>().mesh;       
         vertices = mesh.vertices;
     }
 

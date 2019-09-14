@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1011023924387780980}
   - component: {fileID: 1011023924387780981}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Grenade Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,6 +124,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 3
   blasteradius: 1
-  force: 700
+  force: 2
   explosionEffect: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664,
+    type: 3}
+  GrenadeTerrainDeform: {fileID: 319274031256888659, guid: ae044b1f4127d4e48986c8cb7dd02051,
     type: 3}
