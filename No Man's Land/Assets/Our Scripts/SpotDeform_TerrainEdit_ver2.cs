@@ -51,7 +51,7 @@ public class SpotDeform_TerrainEdit_ver2 : MonoBehaviour
         {
             // Convert 3D local point to world point
             worldPoint = transform.TransformPoint(vert);
-            // Pass point to terrain editor
+            // Pass world point to terrain editor
             EditTerrain(worldPoint, addTerrain, force, range);
         }
     }
