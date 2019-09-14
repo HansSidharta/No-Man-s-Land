@@ -12,7 +12,8 @@ public class SpotDeform_TerrainEdit_ver2 : MonoBehaviour
 
     [SerializeField] private AnimationCurve forceOverDistance = AnimationCurve.Constant(0, 1, 1);
     private World world;
-    private GameObject temp;    
+    private GameObject temp;   
+    [SerializeField] private string ObjectLookup; 
     [SerializeField] private Transform attachedMeshObject;
     private Vector3[] vertices;
     Mesh mesh;
@@ -22,6 +23,11 @@ public class SpotDeform_TerrainEdit_ver2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Script needs reference to world, world object name must be given
+        if(ObjectLookup == null)
+        {
+            throw new System.NullReferenceException();
+        }
         // Initialise Cube Chunk
         _initChunks = new Chunk[8];
 
@@ -31,8 +37,8 @@ public class SpotDeform_TerrainEdit_ver2 : MonoBehaviour
         // Get vertex data from Mesh
         vertices = mesh.vertices;
         
-        // Find instance of Gameworld from scene
-        temp = GameObject.Find("World_Test");
+        // Find instance of Gameworld from scene using ObjectLookup
+        temp = GameObject.Find(ObjectLookup);
 
         // If game world found, assign to world
         if (temp != null)

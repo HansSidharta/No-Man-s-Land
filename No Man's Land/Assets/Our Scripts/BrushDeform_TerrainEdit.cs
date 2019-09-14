@@ -15,7 +15,9 @@ public class BrushDeform_TerrainEdit : MonoBehaviour
     private World world;
 
     private GameObject temp;
+    [SerializeField] private string ObjectLookup; 
     [SerializeField] private Transform attachedMeshObject;
+    
     Chunk[] _initChunks;
     Mesh mesh;
     private Vector3[] vertices;
@@ -24,6 +26,11 @@ public class BrushDeform_TerrainEdit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Script needs reference to world, world object name must be given
+        if(ObjectLookup == null)
+        {
+            throw new System.NullReferenceException();
+        }
         // Initialise Cube chunk
         _initChunks = new Chunk[8];
 

@@ -134,5 +134,5 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  world: {fileID: 6521141145452102436, guid: e6a78338262a339479d8aee4b3182d54, type: 3}
+  ObjectLookup: World_Test
   attachedMeshObject: {fileID: 7143778590878503049}
