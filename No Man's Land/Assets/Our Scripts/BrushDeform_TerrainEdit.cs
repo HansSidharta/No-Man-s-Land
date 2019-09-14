@@ -61,10 +61,10 @@ public class BrushDeform_TerrainEdit : MonoBehaviour
 
             // Pass world point through to terrain editor
             EditTerrain(worldPoint, addTerrain, force, range);
-        }
 
-        // Yeild to the main thread after given period
-        yield return new WaitForSeconds(.1f);
+            // Yeild to the main thread. Resume looping when feasible
+            yield return new WaitForSeconds(.1f);
+        }        
     }
 
     private void EditTerrain(Vector3 point, bool addTerrain, float force, float range)
