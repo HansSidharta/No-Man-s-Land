@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chunkSize: 16
   worldWidth: 5
-  worldHeight: 4
+  worldHeight: 10
   worldDepth: 10
   isolevel: 0.1
   seed: 5555
