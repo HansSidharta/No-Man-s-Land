@@ -60,6 +60,9 @@ public class SpotDeform_TerrainEdit_ver2 : MonoBehaviour
             // Pass world point to terrain editor
             EditTerrain(worldPoint, addTerrain, force, range);
         }
+
+        // Remove object from gameworld
+        Destroy(gameObject);
     }
 
     private void EditTerrain(Vector3 point, bool addTerrain, float force, float range)
@@ -106,6 +109,6 @@ public class SpotDeform_TerrainEdit_ver2 : MonoBehaviour
                     world.SetDensity(newDensity, offsetX, offsetY, offsetZ, true, _initChunks);
                 }
             }
-        }
+        }        
     }
 }
