@@ -1,7 +1,7 @@
 # No Man's Land
-COMP602 Software Development Practice
-Auckland University of Technology
-Team: No mans Land
+COMP602 Software Development Practice  
+Auckland University of Technology  
+Team: No mans Land  
 
 ## Requirements
   - Unity Hub
