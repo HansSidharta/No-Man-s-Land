@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,8 +23,11 @@ public class SpotDeform_TerrainEdit_ver2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Script needs reference to world, world object name must be given
-        if(ObjectLookupTag == null)
+        // Given Tag must be true and active. Ability to edit terrain is predicatd finding the tag assosiated with 'World'
+        // Get list of known tags from unity
+        string[] check = UnityEditorInternal.InternalEditorUtility.tags;
+        // Check if object tag is true and active
+        if(ObjectLookupTag == null || !(Array.Exists(check, element => element == ObjectLookupTag)))
         {
             throw new System.NullReferenceException();
         }

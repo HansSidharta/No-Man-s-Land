@@ -35,22 +35,22 @@ public class MovementXAxis : MonoBehaviour
             pos.x = Mathf.Clamp(pos.x, 0.1f, 0.9f);
             transform.position = Camera.main.ViewportToWorldPoint(pos);
 
-            // if (touchPosition.x < 0  && touchPosition.y < -60)//make the sprite move left
-            // {
-            //     if (facingLeft)
-            //     {
-            //         Flip();
-            //     }
-            //     MoveLeft();
-            // }
-            // else if (touchPosition.x > 0 && touchPosition.y < -60)//make the character move right
-            // {
-            //     if (!facingLeft)
-            //     {
-            //         Flip();
-            //     }
-            //     MoveRight();
-            // }
+            if (touchPosition.x < 0  && touchPosition.y < -60)//make the sprite move left
+            {
+                if (facingLeft)
+                {
+                    Flip();
+                }
+                MoveLeft();
+            }
+            else if (touchPosition.x > 0 && touchPosition.y < -60)//make the character move right
+            {
+                if (!facingLeft)
+                {
+                    Flip();
+                }
+                MoveRight();
+            }
         }
         else
         {
