@@ -7,7 +7,7 @@ public class MovementXAxis : MonoBehaviour
     //variables
     public float moveSpeed = 0.5f;
     public GameObject character;
-    public Rigidbody2D characterBody;
+    public Rigidbody characterBody;
     private float screenwidth;
     private float screenHeight;
     public bool facingLeft = true;
@@ -18,7 +18,7 @@ public class MovementXAxis : MonoBehaviour
     {
         screenwidth = Screen.width;//gets the screen width
         screenHeight = Screen.height;//gets the screen height
-        characterBody = character.GetComponent<Rigidbody2D>();
+        characterBody = character.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -35,22 +35,22 @@ public class MovementXAxis : MonoBehaviour
             pos.x = Mathf.Clamp(pos.x, 0.1f, 0.9f);
             transform.position = Camera.main.ViewportToWorldPoint(pos);
 
-            if (touchPosition.x < 0  && touchPosition.y < -60)//make the sprite move left
-            {
-                if (facingLeft)
-                {
-                    Flip();
-                }
-                MoveLeft();
-            }
-            else if (touchPosition.x > 0 && touchPosition.y < -60)//make the character move right
-            {
-                if (!facingLeft)
-                {
-                    Flip();
-                }
-                MoveRight();
-            }
+            // if (touchPosition.x < 0  && touchPosition.y < -60)//make the sprite move left
+            // {
+            //     if (facingLeft)
+            //     {
+            //         Flip();
+            //     }
+            //     MoveLeft();
+            // }
+            // else if (touchPosition.x > 0 && touchPosition.y < -60)//make the character move right
+            // {
+            //     if (!facingLeft)
+            //     {
+            //         Flip();
+            //     }
+            //     MoveRight();
+            // }
         }
         else
         {

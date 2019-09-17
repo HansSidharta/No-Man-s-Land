@@ -134,5 +134,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  ObjectLookup: World_Test
+  ObjectLookupTag: World
   attachedMeshObject: {fileID: 7143778590878503049}
+  vertices: []
+  _initChunks: []
+  worldPoint: {x: 0, y: 0, z: 0}

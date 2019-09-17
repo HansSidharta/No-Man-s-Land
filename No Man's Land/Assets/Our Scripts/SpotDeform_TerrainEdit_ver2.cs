@@ -4,27 +4,27 @@ using UnityEngine;
 
 public class SpotDeform_TerrainEdit_ver2 : MonoBehaviour
 {
-    [SerializeField] private bool addTerrain = true;
-    [SerializeField] private float force = 2f;
-    [SerializeField] private float range = 2f;
+    [SerializeField] protected bool addTerrain = true;
+    [SerializeField] protected float force = 2f;
+    [SerializeField] protected float range = 2f;
 
-    [SerializeField] private float maxReachDistance = 1f;
+    [SerializeField] protected float maxReachDistance = 1f;
 
-    [SerializeField] private AnimationCurve forceOverDistance = AnimationCurve.Constant(0, 1, 1);
-    private World world;
-    private GameObject temp;   
-    [SerializeField] private string ObjectLookup; 
-    [SerializeField] private Transform attachedMeshObject;
-    private Vector3[] vertices;
+    [SerializeField] protected AnimationCurve forceOverDistance = AnimationCurve.Constant(0, 1, 1);
+    protected World world;
+    GameObject temp;   
+    [SerializeField] protected string ObjectLookupTag; 
+    [SerializeField] protected Transform attachedMeshObject;
+    protected Vector3[] vertices;
     Mesh mesh;
-    Chunk[] _initChunks;
-    private Vector3 worldPoint;
+    protected Chunk[] _initChunks;
+    protected Vector3 worldPoint;
 
     // Start is called before the first frame update
     void Start()
     {
         // Script needs reference to world, world object name must be given
-        if(ObjectLookup == null)
+        if(ObjectLookupTag == null)
         {
             throw new System.NullReferenceException();
         }
@@ -38,19 +38,20 @@ public class SpotDeform_TerrainEdit_ver2 : MonoBehaviour
         vertices = mesh.vertices;
         
         // Find instance of Gameworld from scene using ObjectLookup
-        temp = GameObject.Find(ObjectLookup);
+        temp = GameObject.FindGameObjectWithTag(ObjectLookupTag);
 
         // If game world found, assign to world
         if (temp != null)
-        {
+        {            
             world = temp.GetComponent<World>();
         }
 
         // Update frame
         UpdateFrame();
+        
     }
 
-    void UpdateFrame()
+    public virtual void UpdateFrame()
     {
         // loop through each vertex to get 3D point
         foreach (Vector3 vert in vertices)
@@ -65,7 +66,7 @@ public class SpotDeform_TerrainEdit_ver2 : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void EditTerrain(Vector3 point, bool addTerrain, float force, float range)
+    protected void EditTerrain(Vector3 point, bool addTerrain, float force, float range)
     {
         // strength modifier
         int buildModifier = addTerrain ? 1 : -1;

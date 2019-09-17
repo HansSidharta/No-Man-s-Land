@@ -108,7 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   addTerrain: 0
   force: 5
-  range: 5
+  range: 3
   maxReachDistance: 1
   forceOverDistance:
     serializedVersion: 2
@@ -134,5 +134,5 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  ObjectLookup: World_Test
+  ObjectLookupTag: World
   attachedMeshObject: {fileID: 319274031256888655}
