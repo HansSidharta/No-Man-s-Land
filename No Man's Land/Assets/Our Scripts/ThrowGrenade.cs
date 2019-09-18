@@ -54,7 +54,7 @@ public class ThrowGrenade : MonoBehaviour
             {
                 if (isSwipeStraight())
                 {
-                if (countdown < = 0f)
+                if (countdown <= 0f)
                 {
                     throwGrenade();
                     countdown = 3f;
