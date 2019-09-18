@@ -7,6 +7,7 @@ public class ThrowGrenade : MonoBehaviour
     private Vector2 finalFingerPosition;
     public float throwForce;
     public GameObject grenadePrefab;
+    private float countdown = 3f;
 
     [SerializeField]
     private float minDistanceForSwipe = 5f;
@@ -15,29 +16,34 @@ public class ThrowGrenade : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        foreach (Touch touch in Input.touches)
+        countdown -= Time.deltaTime;
+        if (countdown <= 0f)
         {
-            if(touch.phase == TouchPhase.Began)
+            foreach (Touch touch in Input.touches)
             {
-                initialFingerPosition = touch.position;
-            }
+                if (touch.phase == TouchPhase.Began)
+                {
+                    initialFingerPosition = touch.position;
+                }
 
-            //if (!detectSwipeAfterRelease && touch.phase == TouchPhase.Moved)
-            //{
-            //    finalFingerPosition = touch.position;
-            //    DetectionSwipe();
-            //}
+                //if (!detectSwipeAfterRelease && touch.phase == TouchPhase.Moved)
+                //{
+                //    finalFingerPosition = touch.position;
+                //    DetectionSwipe();
+                //}
 
-            if (touch.phase == TouchPhase.Ended)
-            {
-                finalFingerPosition = touch.position;
-                DetectionSwipe();
+                if (touch.phase == TouchPhase.Ended)
+                {
+                    finalFingerPosition = touch.position;
+                    DetectionSwipe();
+                }
             }
         }
     }
 
     void throwGrenade()
     {
+        
         throwForcecalc(VerticalMovementDistance());
         GameObject gr = Instantiate(grenadePrefab, transform.position, transform.rotation);
         Rigidbody rb = gr.GetComponent<Rigidbody>();
