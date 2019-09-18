@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3571464487881481545}
   - component: {fileID: 6521141145452102436}
   m_Layer: 0
-  m_Name: World_Test
+  m_Name: World
   m_TagString: World
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
