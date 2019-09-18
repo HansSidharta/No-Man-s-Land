@@ -107,8 +107,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   addTerrain: 0
-  force: 5
-  range: 3
+  force: 1
+  range: 10
   maxReachDistance: 1
   forceOverDistance:
     serializedVersion: 2
