@@ -3,7 +3,7 @@
     <Files>
       <File FileName="Assets/Our Scripts/MovementXAxis.cs" Line="1" Column="1" />
       <File FileName="Assets/Our Scripts/ThrowGrenade.cs" Line="60" Column="36" />
-      <File FileName="Assets/Our Scripts/GrenadeJob.cs" Line="35" Column="28" />
+      <File FileName="Assets/Our Scripts/GrenadeJob.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
