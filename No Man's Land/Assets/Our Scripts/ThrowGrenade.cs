@@ -16,9 +16,7 @@ public class ThrowGrenade : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        countdown -= Time.deltaTime;
-        if (countdown <= 0f)
-        {
+
             foreach (Touch touch in Input.touches)
             {
                 if (touch.phase == TouchPhase.Began)
@@ -39,7 +37,6 @@ public class ThrowGrenade : MonoBehaviour
                 }
             }
         }
-    }
 
     void throwGrenade()
     {
@@ -52,11 +49,16 @@ public class ThrowGrenade : MonoBehaviour
 
     private void DetectionSwipe()
     {
-        if(SwipeDistanceCheckMet())
+        countdown -= Time.deltaTime;
+        if (countdown <= 0f)
         {
-            if(isSwipeStraight())
+            if (SwipeDistanceCheckMet())
             {
-                throwGrenade();
+                if (isSwipeStraight())
+                {
+                    throwGrenade();
+                    countdown = 3f;
+                }
             }
         }
     }
