@@ -7,7 +7,7 @@ public class ThrowGrenade : MonoBehaviour
     private Vector2 finalFingerPosition;
     public float throwForce;
     public GameObject grenadePrefab;
-    private float countdown = 3f;
+    private float countdown = 0f;// countdown of the grenade
 
     [SerializeField]
     private float minDistanceForSwipe = 5f;
@@ -16,21 +16,15 @@ public class ThrowGrenade : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        countdown -= Time.deltaTime;
+        countdown -= Time.deltaTime;// each frame delete 1s
         foreach (Touch touch in Input.touches)
             {
-                if (touch.phase == TouchPhase.Began)
+                if (touch.phase == TouchPhase.Began)// take the initial finger position
                 {
                     initialFingerPosition = touch.position;
                 }
 
-                //if (!detectSwipeAfterRelease && touch.phase == TouchPhase.Moved)
-                //{
-                //    finalFingerPosition = touch.position;
-                //    DetectionSwipe();
-                //}
-
-                if (touch.phase == TouchPhase.Ended)
+                if (touch.phase == TouchPhase.Ended)// take the final finger position
                 {
                     finalFingerPosition = touch.position;
                     DetectionSwipe();
@@ -40,7 +34,7 @@ public class ThrowGrenade : MonoBehaviour
 
     void throwGrenade()
     {
-        
+
         throwForcecalc(VerticalMovementDistance());
         GameObject gr = Instantiate(grenadePrefab, transform.position, transform.rotation);
         Rigidbody rb = gr.GetComponent<Rigidbody>();
@@ -57,18 +51,18 @@ public class ThrowGrenade : MonoBehaviour
                 if (countdown <= 0f)
                 {
                     throwGrenade();
-                    countdown = 3f;
+                    countdown = 3f;// make the countdown 3s to not spam grenades
                 }
                 }
             }
         }
 
-    private bool isSwipeStraight()
+    private bool isSwipeStraight()// checking is the swipe is straight
     {
         return VerticalMovementDistance() > HorizontalMovementDistance();
     }
 
-    private bool SwipeDistanceCheckMet()
+    private bool SwipeDistanceCheckMet()// checking if the swipe met the condition
     {
         return VerticalMovementDistance() > minDistanceForSwipe;
     }
@@ -83,7 +77,7 @@ public class ThrowGrenade : MonoBehaviour
         return Mathf.Abs(finalFingerPosition.x - initialFingerPosition.x);
     }
 
-    void throwForcecalc(float swipeDist)
+    void throwForcecalc(float swipeDist)// to calculate the throw force
     {
         throwForce = 0.09f * swipeDist;
     }
