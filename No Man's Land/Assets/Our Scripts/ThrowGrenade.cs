@@ -7,7 +7,7 @@ public class ThrowGrenade : MonoBehaviour
     private Vector2 finalFingerPosition;
     public float throwForce;
     public GameObject grenadePrefab;
-    private float countdown = 3f;
+    private float countdown = 0f;
 
     [SerializeField]
     private float minDistanceForSwipe = 5f;
@@ -40,7 +40,7 @@ public class ThrowGrenade : MonoBehaviour
 
     void throwGrenade()
     {
-        
+
         throwForcecalc(VerticalMovementDistance());
         GameObject gr = Instantiate(grenadePrefab, transform.position, transform.rotation);
         Rigidbody rb = gr.GetComponent<Rigidbody>();
