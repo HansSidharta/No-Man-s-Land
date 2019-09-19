@@ -5,11 +5,8 @@ using UnityEngine;
 public class SpotDeform_TerrainEdit_ver2 : MonoBehaviour
 {
     [SerializeField] protected bool addTerrain = true;
-    [SerializeField] protected float force = 2f;
     [SerializeField] protected float range = 2f;
-
-    [SerializeField] protected float maxReachDistance = 1f;
-
+    protected float force = 2f;
     [SerializeField] protected AnimationCurve forceOverDistance = AnimationCurve.Constant(0, 1, 1);
     protected World world;
     GameObject temp;   
