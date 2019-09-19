@@ -49,8 +49,7 @@ public class SpotDeform_TerrainEdit_ver2 : MonoBehaviour
         }
 
         // Update frame
-        UpdateFrame();
-        
+        UpdateFrame();        
     }
 
     public virtual void UpdateFrame()

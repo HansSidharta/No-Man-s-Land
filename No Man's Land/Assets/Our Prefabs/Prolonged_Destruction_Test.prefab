@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5360150226250095088}
   m_Layer: 0
   m_Name: Prolonged_Destruction_Test
-  m_TagString: Untagged
+  m_TagString: Brush Deform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,9 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   addTerrain: 0
-  force: 2
   range: 2
-  maxReachDistance: 1
   forceOverDistance:
     serializedVersion: 2
     m_Curve:
@@ -136,6 +134,3 @@ MonoBehaviour:
     m_RotationOrder: 4
   ObjectLookupTag: World
   attachedMeshObject: {fileID: 7143778590878503049}
-  vertices: []
-  _initChunks: []
-  worldPoint: {x: 0, y: 0, z: 0}
