@@ -7,6 +7,8 @@ TagManager:
   - World
   - World_Test
   - Grenade_Emitter
+  - Spot Deform
+  - Brush Deform
   layers:
   - Default
   - TransparentFX
