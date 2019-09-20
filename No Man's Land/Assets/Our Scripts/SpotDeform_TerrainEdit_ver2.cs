@@ -9,7 +9,7 @@ public class SpotDeform_TerrainEdit_ver2 : MonoBehaviour
     protected float force = 2f;
     [SerializeField] protected AnimationCurve forceOverDistance = AnimationCurve.Constant(0, 1, 1);
     protected World world;
-    GameObject temp;   
+    GameObject searchedTagGameObject;   
     [SerializeField] protected string ObjectLookupTag; 
     [SerializeField] protected Transform attachedMeshObject;
     protected Vector3[] vertices;
@@ -24,7 +24,7 @@ public class SpotDeform_TerrainEdit_ver2 : MonoBehaviour
         // Get list of known tags from unity
         string[] check = UnityEditorInternal.InternalEditorUtility.tags;
 
-        // Check if object tag is true and active
+        // Check if object tag is true and active in the scene
         if(ObjectLookupTag == null || !(Array.Exists(check, element => element == ObjectLookupTag)))
         {
             throw new System.NullReferenceException();
@@ -39,13 +39,17 @@ public class SpotDeform_TerrainEdit_ver2 : MonoBehaviour
         // Get vertex data from Mesh
         vertices = mesh.vertices;
         
-        // Find instance of Gameworld from scene using ObjectLookup
-        temp = GameObject.FindGameObjectWithTag(ObjectLookupTag);
+        // Find instance of Gameworld from scene using input String (ObjectLookupTag)
+        searchedTagGameObject = GameObject.FindGameObjectWithTag(ObjectLookupTag);
 
         // If game world found, assign to world
-        if (temp != null)
+        if (searchedTagGameObject != null)
         {            
-            world = temp.GetComponent<World>();
+            world = searchedTagGameObject.GetComponent<World>();
+        }
+        if (searchedTagGameObject == null)
+        {
+            throw new NullReferenceException();
         }
 
         // Update frame
@@ -112,5 +116,17 @@ public class SpotDeform_TerrainEdit_ver2 : MonoBehaviour
                 }
             }
         }        
+    }
+
+    public void Construct(String tag, GameObject searchedTagGameObject)
+    {
+        // Class is used for testing purpose. 
+        // Since class methods and parameters are private, and defined in the editor
+        // it is difficult to test efficently
+        // This class gives the test some way to instantiate the script with testable variables
+
+        this.ObjectLookupTag = tag;
+        this.searchedTagGameObject = searchedTagGameObject;
+
     }
 }

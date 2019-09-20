@@ -12,10 +12,22 @@ namespace Tests
     {
         [Test]
         public void _testNullWorldException()
-        {            
-            var _spotDeform = new GameObject().AddComponent<SpotDeform_TerrainEdit_ver2>();            
+        {  
+            // Ensure Test catches when the world is not given in the Editor (A correct 'World name'World must be given to pass)
+            GameObject _spotDeform =  GameObject.CreatePrimitive(PrimitiveType.Cube);
+
+            _spotDeform.AddComponent<SpotDeform_TerrainEdit_ver2>();                        
                         
-            Assert.Throws<NullReferenceException>(() => _spotDeform.UpdateFrame());         
+            Assert.Catch<NullReferenceException>(() => GameObject.Instantiate(_spotDeform));         
+        }
+
+        [Test]
+        public void _testWorldBoundException()
+        {
+            // Tests that the script correctly recognises when vertex data is not within its bounds
+            var _spotDeform = new GameObject().AddComponent<SpotDeform_TerrainEdit_ver2>();
+
+            Assert.Catch<NullReferenceException>(() => _spotDeform.UpdateFrame());
         }
 
 
