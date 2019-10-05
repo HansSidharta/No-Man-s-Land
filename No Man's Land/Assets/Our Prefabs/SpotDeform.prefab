@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   addTerrain: 0
-  range: 4
+  range: 3
   forceOverDistance:
     serializedVersion: 2
     m_Curve:
