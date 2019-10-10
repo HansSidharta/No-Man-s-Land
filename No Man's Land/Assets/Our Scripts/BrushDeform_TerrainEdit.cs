@@ -1,8 +1,7 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class BrushDeform_TerrainEdit : SpotDeform_TerrainEdit_ver2
+public class BrushDeform_TerrainEdit : SpotDeform_TerrainEdit
 {
     Vector3 lastposition, currentPosition;
 
@@ -17,7 +16,7 @@ public class BrushDeform_TerrainEdit : SpotDeform_TerrainEdit_ver2
         // Set up co-routine to save perf (~25-40% saved)
         // Coroutine runs on main thread. Run non-critical code
         // Start Coroutine
-        StartCoroutine("FrameUpdate");
+        StartCoroutine(coroutineMethod);
     }
 
     IEnumerator FrameUpdate()

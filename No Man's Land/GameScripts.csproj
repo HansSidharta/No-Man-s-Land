@@ -57,6 +57,7 @@
   <ItemGroup>
      <Compile Include="Assets\Our Scripts\BrushDeform_TerrainEdit.cs" />
      <Compile Include="Assets\Our Scripts\Chunk.cs" />
+     <Compile Include="Assets\Our Scripts\CountdownTimer.cs" />
      <Compile Include="Assets\Our Scripts\GenerateDensity.cs" />
      <Compile Include="Assets\Our Scripts\GrenadeJob.cs" />
      <Compile Include="Assets\Our Scripts\LookupTables.cs" />
@@ -64,7 +65,7 @@
      <Compile Include="Assets\Our Scripts\Move.cs" />
      <Compile Include="Assets\Our Scripts\MovementXAxis.cs" />
      <Compile Include="Assets\Our Scripts\Point.cs" />
-     <Compile Include="Assets\Our Scripts\SpotDeform_TerrainEdit_ver2.cs" />
+     <Compile Include="Assets\Our Scripts\SpotDeform_TerrainEdit.cs" />
      <Compile Include="Assets\Our Scripts\ThrowGrenade.cs" />
      <Compile Include="Assets\Our Scripts\Utils.cs" />
      <Compile Include="Assets\Our Scripts\World.cs" />

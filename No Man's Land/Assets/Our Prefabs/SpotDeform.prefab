@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 319274031256888654}
   - component: {fileID: 319274031256888657}
   - component: {fileID: 319274031256888656}
-  - component: {fileID: 319274031256888652}
+  - component: {fileID: 495840031031571176}
   m_Layer: 0
   m_Name: SpotDeform
   m_TagString: Spot Deform
@@ -94,7 +94,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &319274031256888652
+--- !u!114 &495840031031571176
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103,7 +103,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 319274031256888659}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf9ca91ae2d50cc43b32fbaa1ce454af, type: 3}
+  m_Script: {fileID: 11500000, guid: 38e5d0c241948d94bac3f5d39008b5fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   addTerrain: 0
@@ -116,7 +116,7 @@ MonoBehaviour:
       value: 1
       inSlope: 0
       outSlope: 0
-      tangentMode: 34
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
@@ -125,12 +125,12 @@ MonoBehaviour:
       value: 1
       inSlope: 0
       outSlope: 0
-      tangentMode: 34
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  ObjectLookupTag: World
+  objectTagLookup: World
   attachedMeshObject: {fileID: 319274031256888655}

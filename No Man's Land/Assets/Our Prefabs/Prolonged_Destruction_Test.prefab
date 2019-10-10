@@ -132,5 +132,5 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  ObjectLookupTag: World
+  objectTagLookup: World
   attachedMeshObject: {fileID: 7143778590878503049}

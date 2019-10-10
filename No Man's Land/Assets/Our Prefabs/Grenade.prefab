@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 164723232471445052}
   - component: {fileID: 164723232471445053}
   - component: {fileID: 164723232471445050}
-  - component: {fileID: 164723232471445055}
   m_Layer: 0
   m_Name: Grenade
   m_TagString: Untagged
@@ -104,8 +103,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 164723232471445051}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0.25
+  m_Mass: 1e+9
+  m_Drag: 0.2
   m_AngularDrag: 0.1
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -131,16 +130,3 @@ MonoBehaviour:
     type: 3}
   GrenadeTerrainDeform: {fileID: 319274031256888659, guid: ae044b1f4127d4e48986c8cb7dd02051,
     type: 3}
---- !u!135 &164723232471445055
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 164723232471445051}
-  m_Material: {fileID: 13400000, guid: 6f6601231ffcd403bae1c9940f15e609, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 23.139832
-  m_Center: {x: -0.10947895, y: -0.06477356, z: 23.44017}
