@@ -22,6 +22,7 @@ SOFTWARE. */
 
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class Chunk : MonoBehaviour
@@ -54,7 +55,7 @@ public class Chunk : MonoBehaviour
     void Update()
     {
         if(readyforUpdate)
-        {
+        {           
             Generate();
             readyforUpdate = false;
         }
@@ -114,4 +115,5 @@ public class Chunk : MonoBehaviour
     {
         SetDensity(density, pos.x, pos.y, pos.z);
     }
+    
 }

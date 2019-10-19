@@ -30,11 +30,10 @@ public class SpotDeform_TerrainEdit : MonoBehaviour
     protected float force = 2f;
     [SerializeField] protected AnimationCurve forceOverDistance = AnimationCurve.Constant(0, 1, 1);
     protected World world;
-    GameObject searchedTagGameObject;
+    protected GameObject searchedTagGameObject;
     [SerializeField] protected string objectTagLookup;
     [SerializeField] protected Transform attachedMeshObject;
     protected Vector3[] vertices;
-    Mesh mesh;
     protected Chunk[] initializeChunk;
     protected Vector3 worldPoint;
     protected String coroutineMethod = "FrameUpdate";
@@ -60,7 +59,7 @@ public class SpotDeform_TerrainEdit : MonoBehaviour
         else if (searchedTagGameObject == null)
             throw new NullReferenceException();
 
-        mesh = attachedMeshObject.GetComponent<MeshFilter>().mesh;
+        Mesh mesh = attachedMeshObject.GetComponent<MeshFilter>().mesh;
         vertices = mesh.vertices;
 
         initializeChunk = new Chunk[8];
@@ -100,7 +99,7 @@ public class SpotDeform_TerrainEdit : MonoBehaviour
 
     /* 
     This function takes the transformed vertex data and passes it through to the cube marching algorithm.
-    Looping through the X, Y, Z, coordinates.
+    Loping through the X, Y, Z, coordinates.
 
     The "marching cubes" exist within a 3D bounding box. The point data is first tested for presence within the 
     bounding box.
