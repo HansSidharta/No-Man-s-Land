@@ -131,7 +131,8 @@ public class SpotDeform_TerrainEdit : MonoBehaviour
                         continue;
 
                     float distance = Utils.Distance(offsetX, offsetY, offsetZ, point);
-                    if (!(distance <= range)) continue;
+                    if (!(distance <= range)) 
+                        continue;
 
                     float modificationAmount = force / distance * forceOverDistance.Evaluate(1 - distance.Map(0, force, 0, 1)) * buildModifier;
 
