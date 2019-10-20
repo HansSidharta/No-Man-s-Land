@@ -13,7 +13,6 @@ public class ThrowGrenade : MonoBehaviour
     private float minDistanceForSwipe = 5f;
     private bool detectSwipeAfterRelease = false;
 
-    // Update is called once per frame
     void Update()
     {
         countdown -= Time.deltaTime;// each frame delete 1s
@@ -32,9 +31,8 @@ public class ThrowGrenade : MonoBehaviour
             }
         }
 
-    void throwGrenade()
+    public void throwGrenade()
     {
-
         throwForcecalc(VerticalMovementDistance());
         GameObject gr = Instantiate(grenadePrefab, transform.position, transform.rotation);
         Rigidbody rb = gr.GetComponent<Rigidbody>();
@@ -79,6 +77,13 @@ public class ThrowGrenade : MonoBehaviour
 
     void throwForcecalc(float swipeDist)// to calculate the throw force
     {
-        throwForce = 0.09f * swipeDist;
+        if (swipeDist <= 0f)
+        {
+            throwForce = 100f;
+        }
+        else
+        {
+            throwForce = 0.09f * swipeDist;
+        }
     }
 }
