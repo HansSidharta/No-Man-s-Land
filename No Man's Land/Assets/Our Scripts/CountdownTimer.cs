@@ -16,7 +16,13 @@ public class CountdownTimer : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {   //set up the timer
+    { 
+        
+        if (WinManager.ins.Dead)
+            return;
+            
+
+        //set up the timer
         timer -= Time.deltaTime;
         int seconds = (int)(timer % 60);
         int minutes = (int)(timer / 60) % 60;
@@ -25,7 +31,11 @@ public class CountdownTimer : MonoBehaviour
         //if timer reaches 0, timer becomes 0 so it doesn't go negative
         if(seconds <= 0)
         {
-            timer = 0;
+            if (minutes<=0)
+            {
+                timer = 0;
+                WinManager.ins.TimeWin();
+            }
         }
         //output to the screen
         timerText.text = timerString;
