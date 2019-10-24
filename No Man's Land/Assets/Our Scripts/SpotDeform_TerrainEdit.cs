@@ -45,12 +45,7 @@ public class SpotDeform_TerrainEdit : MonoBehaviour
     // be initialsied, otherwise it will throw an exception, and 
     // terminate if the attributes cannot be successfully initialised.
     void Start()
-    {
-        //string[] unityEditorTagsInScene = UnityEditorInternal.InternalEditorUtility.tags;
-
-        //if (objectTagLookup == null || !(Array.Exists(unityEditorTagsInScene, element => element == objectTagLookup)))
-        //    throw new NullReferenceException();            
-
+    { 
         searchedTagGameObject = GameObject.FindGameObjectWithTag(objectTagLookup);
 
         if (searchedTagGameObject != null)

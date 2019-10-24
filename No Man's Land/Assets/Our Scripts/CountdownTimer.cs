@@ -23,7 +23,7 @@ public class CountdownTimer : MonoBehaviour
         //formats to minutes and seconds
         string timerString = string.Format("{0:0} : {1:00}", minutes, seconds);
         //if timer reaches 0, timer becomes 0 so it doesn't go negative
-        if(seconds <= 0)
+        if(timer < 0)
         {
             timer = 0;
         }

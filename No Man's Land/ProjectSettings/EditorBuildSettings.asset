@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/No Mans Land Scenes/Menu.unity
+    guid: 01c4bc07ae157244bb350068ffa7ccb1
+  - enabled: 1
+    path: Assets/No Mans Land Scenes/Demo_SinglePlayer.unity
+    guid: 9fc6e5fde0b080b41b2b07fbf4e4319c
+  - enabled: 1
+    path: Assets/No Mans Land Scenes/DevLand Multiplayer.unity
+    guid: 5f181ef8bb046ef49bf1e7fc9c197ade
   m_configObjects: {}

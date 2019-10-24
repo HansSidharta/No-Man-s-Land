@@ -11,12 +11,12 @@ public class AI : MonoBehaviour
     private float movingTime = 1f;
     private bool stopTrackMove;
     private Boolean moveRight = true;
-    public ThrowGrenade throwGrenade;
+    //public ThrowGrenade throwGrenade;
     // Start is called before the first frame update
     void Start()
     {
         startPointX = AIPlayer.transform.position.x;
-        throwGrenade = FindObjectOfType<ThrowGrenade>();
+        //throwGrenade = FindObjectOfType<ThrowGrenade>();
     }
 
     // Update is called once per frame
@@ -32,7 +32,7 @@ public class AI : MonoBehaviour
 
         if(AITime <= 0f)
         {
-            throwGrenade.throwGrenade();
+            //throwGrenade.throwGrenade();
             StopMoving();
             stopMovingTime = 3f;
             AITime = 5f;
@@ -79,34 +79,6 @@ public class AI : MonoBehaviour
             }
         }
     }
-
-    //private void LeftWall()
-    //{
-    //    if (startPointX - 40 > AIPlayer.transform.position.x)
-    //    {
-    //        MoveRight();
-    //        moveRight = true;
-    //    }
-    //    else
-    //    {
-    //        MoveLeft();
-    //        moveRight = false;
-    //    }
-    //}
-
-    //private void RightWall()
-    //{
-    //    if (startPointX + 40 < AIPlayer.transform.position.x)
-    //    {
-    //        MoveLeft();
-    //        moveRight = false;
-    //    }
-    //    else
-    //    {
-    //        MoveRight();
-    //        moveRight = true;
-    //    }
-    //}
 
     private void MoveLeft()
     {

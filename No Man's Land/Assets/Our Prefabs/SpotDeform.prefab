@@ -107,13 +107,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   addTerrain: 0
-  range: 3
+  range: 6
   forceOverDistance:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
-      value: 1
+      time: 0.037498474
+      value: 0.9750061
       inSlope: 0
       outSlope: 0
       tangentMode: 0
