@@ -36,8 +36,7 @@ public class GrenadeJob : MonoBehaviour
             Rigidbody rb = nearbyObject.GetComponent<Rigidbody>();
             if(rb != null)
             {
-                rb.AddExplosionForce(force, transform.position,blasteradius);
-                //Code here               
+                rb.AddExplosionForce(force, transform.position,blasteradius);              
                 Instantiate(GrenadeTerrainDeform, transform.position, transform.rotation);
             }
         }

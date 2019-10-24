@@ -16,7 +16,13 @@ public class CountdownTimer : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {   //set up the timer
+    { 
+        
+        if (WinManager.ins.Dead)
+            return;
+            
+
+        //set up the timer
         timer -= Time.deltaTime;
         int seconds = (int)(timer % 60);
         int minutes = (int)(timer / 60) % 60;
